@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --Primary-Blue: hsl(246, 80%, 60%);
+    --Primary-lightOrange: hsl(15, 100%, 70%);
+    --Primary-Softblue: hsl(195, 74%, 62%);
+    --Primary-Lightred: hsl(348, 100%, 68%);
+    --Primary-Limegreen: hsl(145, 58%, 55%);
+    --Primary-Violetsocial: hsl(264, 64%, 52%);
+    --Primary-Softorangeselfcare: hsl(43, 84%, 65%);
+    --Neutral-Verydarkblue: hsl(226, 43%, 10%);
+    --Neutral-Darkblue: hsl(235, 46%, 20%);
+    --Neutral-Desaturatedblue: hsl(235, 45%, 61%);
+    --Neutral-PaleBlue: hsl(236, 100%, 87%);
+    --main-gap: 20px;
+    --main-rounded: 14px;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+#app {
+    background-color: var(--Neutral-Verydarkblue);
+    min-height: 100vh;
+    padding-top: 20px;
+    @media (min-width: 768px) {
+        padding-top: 200px;
+    }
+}
+
+.container {
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+$container-min-widths: (
+    576px: 540px,
+    768px: 720px,
+    992px: 940px,
+    1200px: 1140px,
+    1400px: 1200px,
+);
+
+@each $breakPoint, $width in $container-min-widths {
+    @media (min-width: $breakPoint) {
+        .container {
+            width: $width;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--Neutral-Verydarkblue);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--Neutral-Darkblue);
+}
