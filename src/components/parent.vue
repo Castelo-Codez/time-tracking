@@ -255,9 +255,6 @@ onMounted(() => {
     @media (min-width: 768px) {
         flex-direction: row;
     }
-    @media (min-width: 1200px) {
-        align-items: center;
-    }
     gap: 50px;
     @media (min-width: 768px) {
         gap: 20px;
@@ -279,7 +276,7 @@ onMounted(() => {
             column-gap: 20px;
             @media (min-width: 768px) {
                 display: block;
-                padding: var(--padding) var(--padding) 90px;
+                padding: var(--padding) var(--padding) 118px;
             }
             .image {
                 width: 70px;
